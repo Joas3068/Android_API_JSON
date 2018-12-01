@@ -1,0 +1,41 @@
+JOSH ASMUSSEN
+
+1: 	style="background-color: green"
+
+2: 	padding:10px;
+
+3:  margin:120px; 
+ 	padding:120px;
+ 	The p class moves out of the box.
+
+4:	overflow: hidden;
+
+5:	The boxes stack horizontally.
+	If right is used they will be stacked horizontally in the order of 3 2 1.
+
+6:	Using the float right moves the box to the right side relative to where 	the div is at. Left moves it to the left side. 
+	Using the clear command doesn't allow anything to the left or right. 
+
+7:	#div1
+	{
+		background-color:blue;
+	/*	padding:110px;*/
+		/*overflow: hidden;*/
+		float :left;
+	}
+
+	#div2
+	{
+	/*	float: right;
+		clear:right;*/
+		float:left;
+	}
+
+	#div3
+	{
+		/*float: right;*/
+		clear:left;
+	}
+
+8:	Changing the margin for the body moves the boxes to the top left corner.
+

@@ -1,0 +1,57 @@
+Lab12_Solutions
+Josh Asmussen
+
+
+
+
+LINKS:
+
+https://github.com/Joas3068/CU-CSCI3308-CIPractice
+https://travis-ci.com/Joas3068/CU-CSCI3308-CIPractice
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+PART 1:
+
+From the directions provided I'm assuming we are being asked to make a target that runs the execuatable file geometry_test, when 'make test' is called. 
+
+So I added this line to my targets-
+
+test: geometry_test
+	$(EXEC) './geometry_test'
+
+
+-----------------------------------------------------
+
+PART 2:
+
+My file from the sparse directions that were given.
+
+before_install:
+  - sudo apt-get install check
+language: c
+script: make && make test
+
+-----------------------------------------------------
+
+PART 3:
+
+double coord_2d_area_triangle(const coord_2d_t* a, const
+coord_2d_t* b, const coord_2d_t* c)
+{
+    if(!a || !b || !c)
+    {
+        DEBUG(__FILE__,__LINE__,__func__,"An input is NULL");
+        return -1;
+    }
+
+    return abs((a->x * (b->y - c->y) + b->x * (c->y - a->y) + c->x * (a->y - b->y))/2);
+
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+

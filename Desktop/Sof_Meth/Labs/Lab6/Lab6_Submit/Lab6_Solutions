@@ -1,0 +1,75 @@
+JOSH ASMUSSEN
+
+
+1:	select * from store order by sname ASC;
+
+2:	select * from store order by sname ASC limit 3;
+
+3:	select * from store order by sname ASC limit 3 offset 2;
+
+4:	select price from store where price>1;
+
+5:	select price*qty as extended_price from store;
+
+6: 	select sum(price*qty) as total_price from store;
+
+7:	select * from course;
+
+8:	select sum(count) from enrollment;  //351
+
+9:	select count (*) from department;  //4
+
+10:	update course set department_id = '3' where cname = '112';
+
+11a:	alter table enrollment add drop_count TEXT;
+
+11b:	alter table enrollment alter column drop_count set data type VARCHAR;
+
+11c:	alter table enrollment alter column drop_count set data type INTEGER 		 using (drop_count::integer);
+
+12:	update enrollment set drop_count = .2*count;
+
+ id | count | drop_count 
+----+-------+------------
+  1 |    40 |          8
+  2 |    15 |          3
+  3 |    10 |          2
+  4 |    12 |          2
+  5 |    60 |         12
+  6 |    14 |          3
+  7 |   200 |         40
+(7 rows)
+
+13:	select cname, case department_id when '1' then concat('CSC',cname) when '2' then concat('MTH',cname) when '3' then concat('EGR',cname) when '4' then concat('CHM', cname)else 'default' end as full_course from course;
+
+14:	select department.name, course.cname,enrollment.count from department join course on department.id=course.department_id join enrollment on course.id=enrollment.id order by department.name ASC;
+
+ name | cname | count 
+------+-------+-------
+ CHM  | 111   |   200
+ CSC  | 250   |    10
+ CSC  | 231   |    12
+ CSC  | 111   |    40
+ EGR  | 112   |    15
+ EGR  | 250   |    14
+ MTH  | 111   |    60
+(7 rows)
+
+15a:	alter table enrollment drop drop_count;
+
+15b:	truncate table enrollment;
+
+15c:	drop table enrollment;
+
+15d:	create table new_enrollment (id integer primary key auto increment, 		department_name varchar not null, count integer not null,
+		drop_count integer);
+
+15e:	insert into new_enrollment values(1, 'CSC', 100, 20);
+		insert into new_enrollment values(2, 'CHM', 120, 5);
+		insert into new_enrollment values(3, 'MTH', 90, 3);
+		insert into new_enrollment values(4, 'EGR', 122, 12);
+		insert into new_enrollment values(5, 'MTH', 68, 6);
+		insert into new_enrollment values(7, 'CSC', 100, 3);
+		insert into new_enrollment values(8, 'CHM', 30, 1);
+
+		select * from new_enrollment where count = ( select max(count) from new_enrollment );

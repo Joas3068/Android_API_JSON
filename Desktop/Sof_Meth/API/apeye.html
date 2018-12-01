@@ -1,0 +1,52 @@
+<html>
+<style type="text/css">
+	
+#table1, th, td {
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    border-collapse: collapse;
+}
+
+</style>
+<head>
+	<title>Hello</title>
+	<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+		<script>
+			$(document).ready(function() {
+				var url =
+				'https://api.forecast.io/forecast/53f9bcbd553e9b34a46d58128e444e08/40.014984,-105.270546'
+				$.ajax({url:url, dataType:"jsonp"}).then(function(data) {
+					console.log(data);
+					$('#temp').append(data.currently.temperature);
+					$('#apptemp').append(data.currently.apparentTemperature);
+					$('#precip').append(data.currently.summary);
+
+			});
+		});
+		</script>
+</head>
+<body>
+
+
+<table id="table1">
+  <tr>
+    <th>Stat</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <th>Temperature</th>
+    <td id="temp"></td>
+  </tr>
+  <tr>
+    <th >Apparent Temperature</th>
+    <td id="apptemp"></td> 
+  </tr>
+  <tr>
+  	<th>Precip</th>
+    <td id ="precip"></td>
+  </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+Josh Asmussen REC-111
+
+joas3068
+gerstled
+
+3: 	git clone  https://github.com/Joas3068/Recitation-3308
+
+4:	git add README.md
+	git commit -m "Add Readme"
+
+5:	git add Sample1.txt Sample2.txt
+	git commit -m "v0.0.1"
+
+6: 	git tag -l "v0.0.1"
+
+
+7:	git remote add origin https://github.com/Joas3068/Recitation-3308.git
+
+8:	git checkout -b 'new-feature'
+
+9: 	git add Sample3.txt Sample4.txt
+	git commit -m "Add 3 and 4"
+
+
+
+10:	git checkout master
+
+
+11:	git add Sample1.txt
+	git commit -m 'Changed 1'
+
+12:	git merge new-feature
+
+13: git checkout new-feature
+
+14:	git push -u origin master
+	git push origin new-feature 
+
+
+15: Done
+16: Done
+17: git clone https://github.com/gerstled/Recitation-3308
+
+18:	git add README.md
+
+19:	git commit -m "Added My Name"
+
+20: git push -u origin master
+
+21: Done
+22:	git checkout master
+23: Done
+24: git add README.md
+	git commit -m "Added My Name"
+
+26: git pull
+27:git add.
+
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Joas3068/Recitation-3308
+   0878a88..009e784  master     -> origin/master
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+
+
+
+
+commit f9672581c5988152b45f986d7b0635073d223a0b
+Merge: c37a278 009e784
+Author: Joas3068 <joas3068@colorado.edu>
+Date:   Thu Sep 27 09:29:15 2018 -0600
+
+    Resolved Conflicts
+
+commit c37a2787059f5127474e0219541a7874644eea1b
+Author: Joas3068 <joas3068@colorado.edu>
+Date:   Thu Sep 27 09:13:57 2018 -0600
+
+    Changed README
+
+commit 009e7843951d1503d5a900666dda5e7374a78cc5
+Author: David Gerstle <david.gerstle@colorado.edu>
+Date:   Thu Sep 27 09:13:51 2018 -0600
+
+    Edited partner name
+
+commit 0878a888a7137afca3931878f807b2f61fe40120
+Merge: 556a312 b3ca366
+Author: Joas3068 <joas3068@colorado.edu>
+Date:   Thu Sep 27 08:43:44 2018 -0600
+
+    Merge branch 'new-feature'
+
+30: git push -u origin master

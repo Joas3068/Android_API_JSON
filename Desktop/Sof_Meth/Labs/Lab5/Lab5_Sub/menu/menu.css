@@ -1,0 +1,103 @@
+
+/*JOSH ASMUSSEN*/
+
+#parent
+{
+
+	width: 20%;
+	float: left;
+	border: 2px solid black;
+	position: fixed;
+}
+
+.menu
+{
+	
+	margin: 5px 5px 5px 0px;
+	padding:10px 10px 10px 10px;
+	border: 2px solid green;
+	background-color: lightgray; 
+
+
+}
+
+
+
+#info
+{
+	float:right; 
+	width: 80%;
+	padding: 0px;
+
+	
+}
+
+
+.item
+{
+	float:left; 
+
+	width: 80%;
+	padding:10px 10px 10px 10px;
+
+}
+
+
+/*HERE IS A CHANGE, added title 1*/ 
+#TITLE
+{
+	text-decoration: underline;
+	text-align: center;
+}
+
+
+/*HERE IS 1 CHANGE TO THE LINKS 2*/
+a:link {
+    color: blue; 
+    background-color: transparent; 
+    text-decoration: underline;
+}
+
+
+a:visited {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: line-through;
+}
+
+
+/*HERE IS ANOTHER CHANGE, added image below table 3*/
+img
+{
+	border-radius: 10%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*CHANGE 4 added shadow and title for bookmarks 4*/
+#table
+{
+	text-shadow: 1px 5px blue;
+	text-align: center;
+}
+
+
+/*CHANGE FONT OF 1st section 5*/
+#fonty
+{
+
+
+    color: blue;
+    font-family: "Times New Roman";
+    font-size: 160%;
+
+
+}

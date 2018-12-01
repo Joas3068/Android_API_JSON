@@ -1,0 +1,82 @@
+Josh Asmussen 
+
+
+(1) 
+
+(A.) diff scene1_v1.txt scene1_v2.txt
+
+(B.) Lines preceded by a < are lines from the first file, lines preceded by > are 	     lines from the second file
+
+(C.) the context option will specify changes to each file. So there will be a plus 		 if there is a new entry for the 2nd file and a subtraction sign if there is a 		 line removed from the first file.
+
+
+(2)
+
+(A.) grep -Hn "pigeon" * scene1_v1.txt
+(B.) diff scene1_v1.txt scene1_v2.txt | grep  -n "<" 
+
+
+(3.)
+
+(A.) cut -d ':' -f  1  -s scene1_v1.txt
+(B.)  diff scene1_v1.txt scene1_v2.txt | grep "<" | cut -d  ':' -f  1 -s
+
+
+(4.)
+(A.) uniq -d scene1_v1.txt
+(B.) sort scene1_v2.txt scene1_v2.txt| uniq -c | cut -d ':' -f  1  -s
+
+
+
+
+PART 2
+
+Step 5:
+
+(A.) sed 's/[A-Za-z]*//g' cryptic.txt
+(B.) sed 's/[4]/a/g' cryptic.txt |
+	 sed 's/[3]/e/g' |
+	 sed 's/[1]/i/g' |
+	 sed 's/[0]/o/g' |
+	 sed 's/[5]/s/g' |
+	 sed 's/[7]/t/g' 
+
+
+	 echo 
+	 I would use something like this -> sed  's/[4]/a/g ; s/[3]/e/g...' cryptic.txt.
+
+Step 6:
+
+(A.) grep  '^[0-9]\{3\}[-]' -c regex_practice_data.txt 
+	 or grep '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'  -c  regex_practice_data.txt
+	 -> I got 770 numbers
+
+(B.)  grep '[303]*-[441]*-[0-9][0-9][0-9][0-9]'  -c  regex_practice_data.txt ->51
+
+
+Step 7:
+
+(A.) 
+awk 'BEGIN{ print "------Average Cost Per Pizza------" ;}
+
+{if(NR !=1) print "$" $NF/$2;}
+
+END { print "------End Of Report------";
+
+}' pizzaOrders.txt
+
+
+(B.)
+
+awk 'BEGIN{ print "------Percent of Cheese Pizzas------" ;}
+
+{if(NR !=1) sum +=$2; sumC +=$5}
+
+END {  print "%"(sumC/sum)*100;print "------End Of Report------";
+
+}' pizzaOrders.txt
+
+
+
+
+

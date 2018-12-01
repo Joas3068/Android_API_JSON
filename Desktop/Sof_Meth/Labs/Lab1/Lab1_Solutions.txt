@@ -1,0 +1,59 @@
+Josh Asmussen Lab 111
+
+
+
+PART 1
+
+1: mkdir cs3308
+
+2: mv cs3308 CSCI3308_111
+
+3: unzip Lab Materials.zip -d lab1
+
+4: cd lab1, ls -a, there is a secrets.txt
+
+5: ls -lS, -rw-rw-r-- 1 jasm jasm 4138849 Sep  3 13:06 fightingRalphie.png.
+
+6: cp ~/Desktop/CSCI3308/Lab_Materials/images/majesticRalphie.png ~/Desktop/CSCI3308/Lab_Materials/tinyData, cp ~/Desktop/CSCI3308/Lab_Materials/textFiles/aliceinwonderland.txt ~/Desktop/CSCI3308/Lab_Materials/tinyData
+
+7: zip -r tinyData.zip tinyData, 172091 bytes
+
+8: tar czf tinyData.tar tinyData, 172165 bytes
+
+9: rm -r tinyData && rm -r tinyData.zip
+
+10: tar -xvf tinyData.tar, x-extract f-creates archive with filename of tar,	     v-dispalys verbose info.
+
+11: unzip little1.zip -d little1 &&  unzip little2.zip -d little2, littlezip2 has another directory in it called little.
+
+12:  find . -name  target.txt, ./emptyFolders/13/target.txt, 
+~/Desktop/CSCI3308/Lab_Materials/emptyFolders/13/target.txt
+
+13: head -n5 aliceinwonderland.txt >> MyShortStory.txt
+	tail -n5 heartofdarkness.txt >> MyShortStory.txt
+
+
+PART 2
+
+1: sort -nk1 -t$':' password_demo.txt
+
+2: sort -nk4 -t$':' password_demo.txt
+
+3: grep -rnw -i  'system' password_demo.txt
+
+4: wc -w password_demo.txt
+
+5: sort -nk3 -t$':' password_demo.txt | grep -oP "^([^:]*\:){2}\K[^:]*" | uniq -c,   	all are unique userID's so I could just print the file with cat "filename"
+
+6: sort -nk3 -t$':' password_demo.txt | grep -oP "^([^:]*\:){2}\K[^:]*" | uniq -c > tmp	
+
+7: ./getUniqueGID.sh, use chmod +x getUniqueGID.sh, yes. It outputs 41 since all 		userID's are unique. If I used GID like it says, it would output 36.
+
+
+
+
+
+
+
+
+

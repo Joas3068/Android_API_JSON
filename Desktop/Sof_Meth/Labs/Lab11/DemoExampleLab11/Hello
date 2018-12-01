@@ -1,0 +1,22 @@
+class Hello{
+    int a;
+    Hello(int a){
+        this.a = a
+    }
+    public:
+
+        int main(){
+            cout<<this.a;
+
+        }
+
+}
+
+class check{
+
+    Hello h = new Hello(10);
+    cout<<h.a;
+
+    h.main();
+
+}

@@ -1,0 +1,168 @@
+1:
+    def test_init(self):
+        text = 6
+        p = textproc.Processor(text)
+        self.assertEqual(p.text, text, "'text' does not match input")
+
+OUTPUT
+
+E
+======================================================================
+ERROR: test_init (__main__.TextprocTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "textproc_test.py", line 31, in test_init
+    p = textproc.Processor(text)
+  File "/home/jasm/Desktop/Sof_Meth/Labs/Lab11/CU-CSCI3308-PythonUnitTesting/textproc.py", line 55, in __init__
+    raise TextProcError("Processors require strings")
+textproc.TextProcError: Processors require strings
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+
+
+
+
+
+
+
+
+
+
+2:
+
+    def test_count(self):
+        string = "test string with four"
+        p = textproc.Processor("test string with four")
+        self.assertEqual(21, p.count(), "eq")
+
+    def test_count2(self):
+        string = 123
+        p = textproc.Processor(string)
+        self.assertEqual(3,p.count(),"eq")
+
+
+.E.
+======================================================================
+ERROR: test_count2 (__main__.TextprocTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "textproc_test.py", line 41, in test_count2
+    p = textproc.Processor(string)
+  File "/home/jasm/Desktop/Sof_Meth/Labs/Lab11/CU-CSCI3308-PythonUnitTesting/textproc.py", line 55, in __init__
+    raise TextProcError("Processors require strings")
+textproc.TextProcError: Processors require strings
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=1)
+
+
+
+
+
+
+
+
+
+
+3:
+
+    def count_alpha(self):
+        string = '1234A'
+        p = textproc.Processor(string)
+        self.assertEqual(1,p.count_alpha(),"eq")
+
+3 textproc_test.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+
+
+
+
+
+
+4:
+
+    def test_count_numeric(self):
+        string = 'abc0'
+        p = textproc.Processor(string)
+        self.assertEqual(1,p.count_numeric(),"eq")
+
+..F..
+======================================================================
+FAIL: test_count_alpha (__main__.TextprocTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "textproc_test.py", line 47, in test_count_alpha
+    self.assertEqual(1,p.count_alpha(),"eq")
+AssertionError: 1 != 0 : eq
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1)
+
+
+
+
+
+
+
+
+
+
+
+
+5:
+
+
+    def test_count_vowels(self):
+        string = 'aeiou'
+        p = textproc.Processor(string)
+        self.assertEqual(5,p.count_vowels(),"eq")
+
+
+
+======================================================================
+FAIL: test_count_vowels (__main__.TextprocTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "textproc_test.py", line 57, in test_count_vowels
+    self.assertEqual(5,p.count_vowels(),"eq")
+AssertionError: 5 != 4 : eq
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (failures=2)
+
+
+
+6:
+
+
+    def test_phone_number1(self):
+        num = "313-123-3334"
+        p = textproc.Processor(num)
+        self.assertEqual(True,p.is_phonenumber(),"eq")
+
+
+======================================================================
+FAIL: test_phone_number1 (__main__.TextprocTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "textproc_test.py", line 62, in test_phone_number1
+    self.assertEqual(True,p.is_phonenumber(),"eq")
+AssertionError: True != False : eq
+
+
+

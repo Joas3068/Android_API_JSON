@@ -1,0 +1,29 @@
+Josh Asmussen
+
+Q1:
+
+    var query = 'select * from store;';
+
+
+Q2:
+
+ var query = 'select * from store where id = ' +itemId ;
+
+
+
+Q3:
+
+        var itemId = req.params.id;
+        var name = req.params.sname;
+        var name =req.body.sname;
+        var q = req.body.qty;
+        var p = req.body.price;
+
+
+
+        var updateQuery =  'update store set sname= \'' +name+ '\', price=' +p+ ',qty=' +q+ ' where id = ' +itemId;
+
+
+Q4:
+
+ var deleteQuery = 'DELETE from store where id=' +itemId;

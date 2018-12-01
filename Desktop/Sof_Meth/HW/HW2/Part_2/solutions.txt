@@ -1,0 +1,12 @@
+Q: What have we learn so far from this class?
+
+A: We have learned useful things such as RegEx, Agile and Waterfall methodologies, Git and
+HTML/CSS!
+
+
+Q: What are the things needed for Bootstrap to be loaded?
+
+A: Bootstrap loads multiple scripts including a css script and a javascript.
+
+
+Q: Bootstrap grid simply creates rows in columns. It limitss the number of columns to 12 but unlimited rows can be used. 

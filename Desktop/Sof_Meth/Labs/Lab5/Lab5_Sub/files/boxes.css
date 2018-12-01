@@ -1,0 +1,43 @@
+/* the css rules for boxes.html */
+
+div {
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    /*?float:right;*/
+}
+
+body
+{
+	margin: 0px;
+}
+
+#div1
+{
+	background-color:blue;
+/*	padding:110px;*/
+	/*overflow: hidden;*/
+	float :left;
+}
+
+#div2
+{
+/*	float: right;
+	clear:right;*/
+	float:left;
+}
+
+#div3
+{
+	/*float: right;*/
+	clear:left;
+}
+
+.p
+{
+	background-color: yellow;
+/* 	margin:120px; 
+ 	padding:120px;*/
+
+
+}
